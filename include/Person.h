@@ -1,7 +1,9 @@
+#ifndef PERSON_H
+#define PERSON_H
 #pragma once
 #include <iostream>
 #include <string>
-#include <Validation.h>
+#include "Validation.h"
 using namespace std;
 
 class Person{
@@ -51,3 +53,6 @@ public:
 		cout << "Password: " << this->password << endl;
 	}
 };
+
+
+#endif // PERSON_H

@@ -1,3 +1,5 @@
+#ifndef CLIENT_H
+#define CLIENT_H
 #pragma once
 #include "Person.h"
 #include <vector>
@@ -55,3 +57,7 @@ public:
 		cout << "Balance: " << this->balance << endl;
 	}
 };
+
+static vector<Client> allClients;
+static vector<Client>::iterator clIt;
+#endif // CLIENT_H

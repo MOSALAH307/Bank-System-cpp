@@ -1,3 +1,5 @@
+#ifndef EMPLOYEE_H
+#define EMPLOYEE_H
 #pragma once
 #include "Client.h"
 
@@ -27,4 +29,31 @@ public:
 		Person::display();
 		cout << "Salary: " << this->salary << endl;
 	}
+	void addClient(Client& client){
+		allClients.push_back(client);
+	}
+	Client* searchClient(int id) {
+		for (int i = 0; i < allClients.size(); i++) {
+			if (allClients[i].getId() == id) return &allClients[i];
+		}
+//		for (clIt = allClients.begin(); clIt != allClients.end(); clIt++) {
+//			if (clIt->getId() == id) return clIt._Ptr;
+//		}
+		return NULL;
+	}
+	void listClient() {
+		for (clIt = allClients.begin(); clIt != allClients.end(); clIt++) {
+			clIt->display();
+			cout << "-------------------------\n";
+		}
+	}
+	void editClient(int id, string name, string password, double balance) {
+		searchClient(id)->setName(name);
+		searchClient(id)->setPassword(password);
+		searchClient(id)->setBalance(balance);
+	}
 };
+
+static vector<Employee> allEmployees;
+static vector<Employee>::iterator eIt;
+#endif // EMPLOYEE_H

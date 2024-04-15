@@ -1,3 +1,5 @@
+#ifndef VALIDATION_H
+#define VALIDATION_H
 #pragma once
 #include <iostream>
 #include <string>
@@ -12,9 +14,7 @@ public:
 		return true;
 	}
 	static bool validPassword(string password) {
-		for (int i = 0; i < password.length(); i++) {
-			if (password.length() < 8 || password.length() > 20) return false;
-		}
+        if (password.length() < 8 || password.length() > 20) return false;
 		return true;
 	}
     static bool validBalance(double balance){
@@ -30,3 +30,8 @@ public:
         return true;
     }
 };
+
+
+
+
+#endif // VALIDATION_H

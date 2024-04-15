@@ -24,18 +24,14 @@ public:
 	}
 	//Setters
 	void setName(string name) {
-		if(Validation::validName(name)){
-            this->name = name;
-		}
+        this->name = name;
 	}
 	void setId(int id) {
 		this->id = id;
 	}
 	void setPassword(string password) {
-		if(Validation::validPassword(password)){
-            this->password = password;
-		}
-	}
+        this->password = password;
+    }
 	//Getters
 	string getName() {
 		return this->name;
@@ -50,7 +46,7 @@ public:
 	void display() {
 		cout << "Name: " << this->name << endl;
 		cout << "Id: " << this->id << endl;
-		cout << "Password: " << this->password << endl;
+//		cout << "Password: " << this->password << endl;
 	}
 };
 

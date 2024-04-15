@@ -17,8 +17,7 @@ public:
 	}
 	//Setter
 	void setSalary(double salary) {
-	    if(Validation::validSalary(salary))
-            this->salary = salary;
+        this->salary = salary;
 	}
 	//Getter
 	double getSalary() {

@@ -19,9 +19,8 @@ public:
 	}
 	//Setter
 	void setBalance(double balance) {
-		if(Validation::validBalance(balance)){
-            this->balance = balance;
-		}
+        this->balance = balance;
+
 	}
 	//Getter
 	double getBalance() {
